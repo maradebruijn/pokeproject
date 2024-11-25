@@ -1,0 +1,81 @@
+
+  /*********************/
+  /*       ROOT        */
+  /*********************/
+
+
+
+  :root {
+    --h1-color: black;
+  }
+
+
+
+
+  /*********************/
+  /*       TEKST       */
+  /*********************/
+    
+  h1 {
+      color: red;
+  }
+  
+  h2{
+    margin-top: .1em;
+  }
+
+  p, li{
+      text-transform: capitalize;
+      padding: 0.2em;
+      background-color: rgb(195, 195, 255);
+      margin-bottom: .5em;
+  }
+
+  ul{
+    margin-left: -2.4em;
+  }
+
+
+  li{
+    list-style-type: none;
+  }
+
+  .types{
+    display: inline;
+    border-style: dotted;
+    margin-left: 1em;
+  }
+  /*********************/
+  /*     MAIN BOX      */
+  /*********************/
+
+
+  img{
+    text-align: center;
+  }
+
+  .battle{
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+  }
+
+  .pokemon{
+    width: 20em;
+    padding: 1em;
+    background-color: rgb(188, 188, 188);
+    border-style: solid;
+  }
+
+  .firstHalf, .secondHalf{
+    padding: 0.5em;
+    border-style: double;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .firstHalf img{
+    margin-top: .5em;
+    width: 11em;
+    height: auto;
+  }
