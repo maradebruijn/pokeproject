@@ -42,9 +42,13 @@
 
   .types{
     display: inline;
-    border-style: dotted;
-    margin-left: 1em;
+    border-style: solid;
+    border-width: 0.1em;
+    margin-left: .5em;
+    margin-right: .5em;
   }
+
+  
   /*********************/
   /*     MAIN BOX      */
   /*********************/
@@ -67,10 +71,14 @@
     border-style: solid;
   }
 
+
   .firstHalf, .secondHalf{
     padding: 0.5em;
     border-style: double;
     text-align: center;
+  }
+
+  .firstHalf{
     background-color: rgb(255, 255, 255);
   }
 
@@ -78,4 +86,8 @@
     margin-top: .5em;
     width: 11em;
     height: auto;
+  }
+
+  .secondHalf{
+    background-color: rgb(255, 53, 53);
   }

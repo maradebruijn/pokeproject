@@ -71,25 +71,28 @@
     </script>
     
     <section class = "pokemon">
-        <section>
-        {poke} 
-        <img src={pokeSprite} alt="{poke} sprite front facing">
-       
-    {#each pokeTypes as types, i (types)}
+
+        <section class="firstHalf">
+            <h2>{poke} </h2> 
     
-        {types}
+            {#each pokeTypes as types, i (types)}
     
-    {/each}
-    </section>
+              <p class="types"> {types} </p>
     
+            {/each}
     
+            <img src={pokeSprite} alt="{poke} sprite front facing">
     
-    <h2> {poke} Moves </h2>
-    
-    {#each pokeRealMoves as dmoves, i (dmoves)}
-        <section>
-           <p> {dmoves} </p>
         </section>
-    {/each}
-    </section>
     
+        <section class="secondHalf">
+    <h3> Moves </h3>
+    
+            {#each pokeRealMoves as dmoves, i (dmoves)}
+                <ul>
+                <li> {dmoves} </li>
+                </ul>
+            {/each}
+        </section>
+    
+    </section>

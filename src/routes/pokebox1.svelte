@@ -21,7 +21,7 @@ import { onMount } from "svelte";
 
     onMount(() => {
       async function getPoke() {
-        url = "https://pokeapi.co/api/v2/pokemon/crabominable";
+        url = "https://pokeapi.co/api/v2/pokemon/charizard";
         try {
           const response = await fetch(url);
           if (!response.ok) {
@@ -84,7 +84,7 @@ import { onMount } from "svelte";
           <p class="types"> {types} </p>
 
         {/each}
-
+<br>
         <img src={pokeSprite} alt="{poke} sprite front facing">
 
     </section>
