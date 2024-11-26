@@ -33,6 +33,9 @@
 		
 	})
 
+
+
+
 </script>
 
 <input type="search" id="search"
@@ -41,3 +44,5 @@ placeholder="Search Pokémon...">
 onclick={selectPoke()}>
 
 <!-- https://www.geeksforgeeks.org/search-bar-using-html-css-and-javascript/ -->
+
+

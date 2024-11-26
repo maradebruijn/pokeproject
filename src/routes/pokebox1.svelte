@@ -3,7 +3,7 @@
     import { onMount } from "svelte";
     
         let url;
-        let pokemons= ["eevee", "sylveon", "ekans", "sprigatito", "arceus"];
+        let pokemons= ["eevee", "sylveon", "ekans", "ogerpon", "arceus"];
         let poke1;
         let pokeName;
         let pokeTypes= [];
@@ -115,6 +115,7 @@
             <h2>{pokeName} </h2> 
     
             {#each pokeTypes as types, i (types)}
+            <!-- https://joshtronic.com/2022/02/20/how-to-display-a-javascript-array-in-html/ -->
     
               <p class="types"> {types} </p>
     
