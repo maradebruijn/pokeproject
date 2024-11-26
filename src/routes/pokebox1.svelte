@@ -3,7 +3,7 @@
     import { onMount } from "svelte";
     
         let url;
-        let pokemons= ["eevee", "sylveon", "ekans", "ogerpon", "arceus"];
+        let pokemons= ["eevee", "sylveon", "bulbasaur", "ogerpon", "arceus"];
         let poke1;
         let pokeName;
         let pokeTypes= [];
