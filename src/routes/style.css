@@ -14,6 +14,7 @@
   src: url(fonts/PokemonClassic.ttf);
 }
 
+/* https://www.dafont.com/pokemon-classic.font */
 
   /*********************/
   /*       TEKST       */
@@ -38,6 +39,10 @@
     margin-top: 0;
   }
 
+  .vs{
+   margin-top: 10em;
+  }
+
   p, li{
       text-transform: capitalize;
       padding: 0.2em;
@@ -47,7 +52,7 @@
   }
 
   ul{
-    margin-left: -2.4em;
+    margin-left: -2.5em;
   }
 
 
@@ -76,7 +81,7 @@
   .battle{
     display: flex;
     justify-content: center;
-    gap: 10em;
+    gap: 5em;
   }
 
   .pokemon{

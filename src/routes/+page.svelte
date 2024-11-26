@@ -1,4 +1,4 @@
-<script>
+<script src="./chart.svelte">
 import "./style.css";
     // for (let i = 1; i <19; i++){
     //   fetchData(i)
@@ -38,6 +38,7 @@ import "./style.css";
 
     import PokeBox1 from "./pokebox1.svelte"
     import PokeBox2 from "./pokebox2.svelte"
+    //import SearchBar from "./searchbar.svelte"
     //import { poke2Stats } as Stats2 from "./pokebox2.svelte"
 
 
@@ -69,13 +70,12 @@ import "./style.css";
 
 
 <h1>Pokemon battle</h1>
-
-
 <h2>Contestants</h2>
 
 <section class ="battle">
 
   <PokeBox1 />
+  <h3 class="vs">VS</h3>
   <PokeBox2 />
 
 </section>

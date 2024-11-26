@@ -3,7 +3,7 @@
     import { onMount } from "svelte";
     
         let url;
-        let poke= "simisear";
+        let poke2 = "simisear";
         let pokeName;
         let pokeTypes= [];
         let pokeSprite;
@@ -17,10 +17,13 @@
         let pokeMove4;
         let pokeRealMoves = [];
         let pokeStats = [];
+        // let searchInput = document.querySelector('#search');
+        // let searchButton = document.querySelector('#submit');
+        // let searchTerm = $state('');
     
         onMount(() => {
           async function getPoke() {
-            url = "https://pokeapi.co/api/v2/pokemon/" + poke;
+            url = "https://pokeapi.co/api/v2/pokemon/"+ poke2;
             try {
               const response = await fetch(url);
               if (!response.ok) {
@@ -67,9 +70,31 @@
             }
           }
           getMoves();
+	
+
         });
-    
-    </script>
+
+        
+        // function selectPoke(){
+
+        //     // poke1 = searchInput.value;
+        //     // console.log(poke1)
+
+            
+        //     // do something with the search term (e.g. redirect to a search results page)
+        //     console.log(`Searching for "${searchTerm}"...`);
+
+        // }
+
+        </script>
+
+        <!-- <section class="searchBar">
+
+            <input bind:value={poke1} id="search"
+            placeholder="Search Pokémon...">
+            <button id="submit" on:click={selectPoke}>Search</button>
+          
+          </section> -->
     
     <section class = "pokemon">
 
@@ -87,15 +112,15 @@
             <img src={pokeSprite} alt="{pokeName} sprite front facing">
     
         </section>
-    
-        <section class="secondHalf">
-    <h3> Moves </h3>
-    
-            {#each pokeRealMoves as dmoves, i (dmoves)}
-                <ul>
-                <li> {dmoves} </li>
-                </ul>
-            {/each}
-        </section>
-    
+
+    <section class="secondHalf">
+<h3> Moves </h3>
+
+        {#each pokeRealMoves as dmoves, i (i)}
+        <!-- https://stackoverflow.com/questions/78243392/svelte-how-to-have-duplicate-keys-in-a-keyed-each -->
+            <ul>
+            <li> {dmoves} </li>
+            </ul>
+        {/each}
     </section>
+</section>
