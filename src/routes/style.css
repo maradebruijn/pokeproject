@@ -7,6 +7,8 @@
 
   :root {
     --h1-color: black;
+    --pokeRed: rgb(255, 53, 53);
+    --pokeBlue: rgb(195, 195, 255);
   }
 
 @font-face {
@@ -26,7 +28,7 @@
 
 
   h1 {
-      color: red;
+      color: var(--pokeRed);
       text-align: center;
   }
   
@@ -46,7 +48,7 @@
   p, li{
       text-transform: capitalize;
       padding: 0.2em;
-      background-color: rgb(195, 195, 255);
+      background-color: var(--pokeBlue);
       margin-bottom: .5em;
       font-size: small;
   }
@@ -58,6 +60,7 @@
 
   li{
     list-style-type: none;
+    background-color: var(--pokeBlue);
   }
 
   .types{
@@ -68,6 +71,24 @@
     margin-right: .5em;
   }
 
+  .firstHalf p{
+    margin-top: 0;
+  }
+  
+  .stats p{
+    display: block;
+    font-size: .8em;
+    margin-bottom: 1em;
+  }
+
+  .statName{
+    text-align: left;
+    margin-right: 1em;
+  }
+
+  .amount{
+    text-align: left;
+  }
   
   /*********************/
   /*     MAIN BOX      */
@@ -108,5 +129,13 @@
   }
 
   .secondHalf{
-    background-color: rgb(255, 53, 53);
+    background-color: var(--pokeRed);
+  }
+
+  /*********************/
+  /*       STATS       */
+  /*********************/
+
+  .stats{
+    display: inline-flex;
   }
