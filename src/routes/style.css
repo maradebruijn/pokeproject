@@ -19,12 +19,23 @@
   /*       TEKST       */
   /*********************/
     
+  h1, h2, h3, h4, p, a, li{
+    font-family: "pokefont";
+}
+
+
   h1 {
       color: red;
+      text-align: center;
   }
   
   h2{
     margin-top: .1em;
+    text-align: center;
+  }
+
+  h3{
+    margin-top: 0;
   }
 
   p, li{
@@ -32,6 +43,7 @@
       padding: 0.2em;
       background-color: rgb(195, 195, 255);
       margin-bottom: .5em;
+      font-size: small;
   }
 
   ul{
@@ -64,7 +76,7 @@
   .battle{
     display: flex;
     justify-content: center;
-    gap: 5em;
+    gap: 10em;
   }
 
   .pokemon{
@@ -86,7 +98,6 @@
   }
 
   .firstHalf img{
-    margin-top: .5em;
     width: 11em;
     height: auto;
   }

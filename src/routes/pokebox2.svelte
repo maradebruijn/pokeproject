@@ -3,7 +3,8 @@
     import { onMount } from "svelte";
     
         let url;
-        let poke;
+        let poke= "simisear";
+        let pokeName;
         let pokeTypes= [];
         let pokeSprite;
         let pokeMoves = [];
@@ -19,7 +20,7 @@
     
         onMount(() => {
           async function getPoke() {
-            url = "https://pokeapi.co/api/v2/pokemon/simisear";
+            url = "https://pokeapi.co/api/v2/pokemon/" + poke;
             try {
               const response = await fetch(url);
               if (!response.ok) {
@@ -28,7 +29,7 @@
        
               const json = await response.json();
     
-              poke = json.name.charAt(0).toUpperCase() + json.name.slice(1).toLowerCase()
+              pokeName = json.name.charAt(0).toUpperCase() + json.name.slice(1).toLowerCase()
               pokeTypes = json.types.map(entry => entry.type.name);
               pokeSprite = json.sprites.front_default
               pokeHeight = json.height
@@ -73,7 +74,7 @@
     <section class = "pokemon">
 
         <section class="firstHalf">
-            <h2>{poke} </h2> 
+            <h2>{pokeName} </h2> 
     
             {#each pokeTypes as types, i (types)}
     
@@ -81,7 +82,9 @@
     
             {/each}
     
-            <img src={pokeSprite} alt="{poke} sprite front facing">
+            <br>
+
+            <img src={pokeSprite} alt="{pokeName} sprite front facing">
     
         </section>
     
