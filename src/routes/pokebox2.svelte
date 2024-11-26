@@ -3,7 +3,8 @@
     import { onMount } from "svelte";
     
         let url;
-        let poke2 = "simisear";
+        let pokemons= ["simisear", "pikachu", "palkia", "litten", "charizard"];
+        let poke2;
         let pokeName;
         let pokeTypes= [];
         let pokeSprite;
@@ -22,6 +23,16 @@
         // let searchTerm = $state('');
     
         onMount(() => {
+
+            function selectPoke(){
+
+                poke2 = pokemons[Math.floor(Math.random() * pokemons.length)]
+                console.log(poke2)
+    
+            }
+
+            selectPoke()
+
           async function getPoke() {
             url = "https://pokeapi.co/api/v2/pokemon/"+ poke2;
             try {
