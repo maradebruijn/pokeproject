@@ -1,6 +1,6 @@
 <script>
     //de code in dit bestand is bijna identiek aan die in pokebox1, waarbij het enige verschil de array "pokemons" is
-    //ik kon helaas niet uitvogelen hoe ik dit zou kunnen mergen naar 1 bestand
+    //ik kon helaas niet uitvogelen hoe ik dit zou kunnen "mergen" naar 1 bestand
 
     import { onMount } from "svelte";
     

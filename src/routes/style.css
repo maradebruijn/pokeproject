@@ -3,8 +3,6 @@
   /*       ROOT        */
   /*********************/
 
-
-
   :root {
     --h1-color: black;
     --pokeRed: rgb(255, 53, 53);
@@ -17,6 +15,10 @@
 }
 
 /* https://www.dafont.com/pokemon-classic.font */
+
+
+
+
 
   /*********************/
   /*       TEKST       */
@@ -76,19 +78,19 @@
   }
   
   .stats p{
+    text-align: left;
     display: block;
     font-size: .8em;
     margin-bottom: 1em;
   }
 
   .statName{
-    text-align: left;
     margin-right: 1em;
   }
 
-  .amount{
-    text-align: left;
-  }
+
+
+
   
   /*********************/
   /*     MAIN BOX      */
@@ -131,10 +133,6 @@
   .secondHalf{
     background-color: var(--pokeRed);
   }
-
-  /*********************/
-  /*       STATS       */
-  /*********************/
 
   .stats{
     display: inline-flex;

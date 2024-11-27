@@ -3,7 +3,7 @@
     import { onMount } from "svelte";
 
     //hier maak ik de variabelen aan die ik later met behulp van een functie vul
-    //ik maak ze hier alvast aan, zodat ik ze later buiten de functie eventueel zou kunnen hergebruiken
+    //ik maak ze hier alvast aan, zodat ik ze later buiten de functie eventueel zou kunnen gebruiken
     
         let url;
         let pokemons= ["eevee", "sylveon", "bulbasaur", "ogerpon", "arceus"]; //random array die doorlinkt naar de API van de gekozen Pokémon
@@ -29,13 +29,13 @@
         //dit zijn de variabelen waarmee ik mijn searchbar wilde maken
         //helaas is mij dit uitiendelijk niet gelukt
 
-        // let searchInput = document.querySelector('#search');
-        // let searchButton = document.querySelector('#submit');
-        // let searchTerm = $state('');
+            // let searchInput = document.querySelector('#search');
+            // let searchButton = document.querySelector('#submit');
+            // let searchTerm = $state('');
     
         onMount(() => {
 
-            function selectPoke(){
+            function selectPoke(){ //deze functie zorgt ervoor dat er een random Pokémon uit mijn array geselecteerd wordt
 
             poke1 = pokemons[Math.floor(Math.random() * pokemons.length)]
             console.log(poke1)
@@ -46,7 +46,7 @@
 
 
 
-          async function getPoke() {
+          async function getPoke() { //met deze functie haal ik de api op, en voeg ik een eerste batch met variabelen toe
             url = "https://pokeapi.co/api/v2/pokemon/"+ poke1;
             try {
               const response = await fetch(url);
@@ -68,7 +68,7 @@
           }
           getPoke();
     
-          async function getMoves() {
+          async function getMoves() { //deze functie zorgt ervoor dat er 4 random 'moves' (aanvallen) uitgekozen worden
     
             try {
               const response = await fetch(url);
@@ -94,7 +94,7 @@
           }
           getMoves();
 	
-          async function statCount() {
+          async function statCount() { //hier worden er de statestieken van een Pokémon opgehaald, en wordt er een "Power" berekend (statSum)
     
             try {
               const response = await fetch(url);
@@ -127,26 +127,26 @@
           //https://www.explainthis.io/en/swe/find-average-in-an-array
         });
 
-        // dit is de functie waarmee ik de searchbar zou willen laten werken
-            // function selectPoke(){
+        // dit is een functie waarmee ik de searchbar zou willen laten werken
+                    // function selectPoke(){
 
-            //     // poke1 = searchInput.value;
-            //     // console.log(poke1)
+                    //     // poke1 = searchInput.value;
+                    //     // console.log(poke1)
 
-            // }
+                    // }
 
         </script>
 
         <!-- 
         Dit is de html van mijn poging om een searchbar te maken
 
-            <section class="searchBar">
+                    <section class="searchBar">
 
-                <input bind:value={poke1} id="search"
-                placeholder="Search Pokémon...">
-                <button id="submit" on:click={selectPoke}>Search</button>
-            
-            </section> 
+                        <input bind:value={poke1} id="search"
+                        placeholder="Search Pokémon...">
+                        <button id="submit" on:click={selectPoke}>Search</button>
+                    
+                    </section> 
         -->
     
     <section class = "pokemon">
