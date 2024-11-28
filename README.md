@@ -1,38 +1,18 @@
-# sv
+# PokeProject
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Welkom bij mijn project voor het blok Tech in de minor Interaction Design
 
-## Creating a project
+## Opdrachten
 
-If you're seeing this, you've probably already done this step. Congrats!
+De gemaakte opdrachten staan in de folder "opdrachten". Hier staan ook een paar probeersels in, waarvan ik dacht dat die misschien ook interessant zouden zijn.
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Website
 
-# create a new project in my-app
-npx sv create my-app
-```
+Ik heb mijn site geupload via Vercel. De link staat rechts-boven onder het kopje "About", of hier direct onder.
 
-## Developing
+> pokeproject-lime.vercel.app
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-```bash
-npm run dev
+## Technische Keuze
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+De pdf van mijn technische keuze staat ook in het mapje opdrachten, als losse pdf met de naam TechnischeKeuze_MdB
