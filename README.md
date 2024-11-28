@@ -1,4 +1,4 @@
-# PokeProject
+# PokéProject
 
 Welkom bij mijn project voor het blok Tech in de minor Interaction Design.
 
