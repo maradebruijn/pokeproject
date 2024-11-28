@@ -51,9 +51,8 @@ import Chart from "./chart.svelte"
 
 </script>
 
-
+<main>
 <h1>Pokemon battle</h1>
-<!-- <Chart /> -->
 <h2>Contestants</h2>
 
 <section class ="battle">
@@ -63,5 +62,6 @@ import Chart from "./chart.svelte"
   <PokeBox2 />
 
 </section>
-
+<Chart />
+</main>
 

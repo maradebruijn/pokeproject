@@ -1,6 +1,7 @@
 <script>
 
     import { onMount } from "svelte";
+    
 
     //hier maak ik de variabelen aan die ik later met behulp van een functie vul
     //ik maak ze hier alvast aan, zodat ik ze later buiten de functie eventueel zou kunnen gebruiken
@@ -33,18 +34,19 @@
             // let searchButton = document.querySelector('#submit');
             // let searchTerm = $state('');
     
-        onMount(() => {
-
-            function selectPoke(){ //deze functie zorgt ervoor dat er een random Pokémon uit mijn array geselecteerd wordt
+             function selectPoke(){ //deze functie zorgt ervoor dat er een random Pokémon uit mijn array geselecteerd wordt
 
             poke1 = pokemons[Math.floor(Math.random() * pokemons.length)]
             console.log(poke1)
 
             }
 
-            selectPoke()
 
 
+            
+        onMount(() => {
+
+            selectPoke();
 
           async function getPoke() { //met deze functie haal ik de api op, en voeg ik een eerste batch met variabelen toe
             url = "https://pokeapi.co/api/v2/pokemon/"+ poke1;
@@ -127,6 +129,8 @@
           //https://www.explainthis.io/en/swe/find-average-in-an-array
         });
 
+        export {poke1}
+
         // dit is een functie waarmee ik de searchbar zou willen laten werken
                     // function selectPoke(){
 
@@ -134,6 +138,8 @@
                     //     // console.log(poke1)
 
                     // }
+
+
 
         </script>
 
@@ -182,6 +188,8 @@
             {/each}
 
             <h3>Statistics</h3>
+
+            
 
                 <section class = "stats">
                     

@@ -1,6 +1,6 @@
 # PokeProject
 
-Welkom bij mijn project voor het blok Tech in de minor Interaction Design
+Welkom bij mijn project voor het blok Tech in de minor Interaction Design.
 
 ## Opdrachten
 
@@ -15,4 +15,4 @@ Ik heb mijn site geupload via Vercel. De link staat rechts-boven onder het kopje
 
 ## Technische Keuze
 
-De pdf van mijn technische keuze staat ook in het mapje opdrachten, als losse pdf met de naam TechnischeKeuze_MdB
+De pdf van mijn technische keuze staat ook in het mapje opdrachten, als losse pdf met de naam TechnischeKeuze_MdB.pdf .
