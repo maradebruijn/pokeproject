@@ -50,12 +50,14 @@
         onMount(() => {
 
           let button = document.getElementById("pokeButton");
-          let poke1;
+          let poke1 = "pikachu";
 
           button.addEventListener ("click", function returnText(){
             poke1 = document.getElementById("userInput").value;
             getPoke();
             getMoves();
+            statCount();
+            drawChart();
           })
 
           async function getPoke() { //met deze functie haal ik de api op, en voeg ik een eerste batch met variabelen toe
@@ -151,6 +153,9 @@
               }
        
               const json = await response.json();
+
+            d3.select("#chart").selectAll('svg').remove();
+            //https://stackoverflow.com/questions/67107991/how-to-remove-old-data-rect-from-d3-chart
     
             const margin = { top: 0, right: 0, bottom: 0, left: 0 },
               width = 500 - margin.left - margin.right,
@@ -232,7 +237,7 @@
 
     <section class = "pokemon">
 
-      <input id="userInput" type="text" placeholder="Text">
+      <input id="userInput" type="text" placeholder="Choose your Pokémon">
       <button id="pokeButton">Submit</button>
 
         <section class="firstHalf">

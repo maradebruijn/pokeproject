@@ -7,8 +7,7 @@
 
     
         let url;
-        let pokemons= ["simisear", "pikachu", "palkia", "litten", "charizard"];
-        let poke2;
+        // let pokemons= ["simisear", "pikachu", "palkia", "litten", "charizard"];
         let pokeName;
         let pokeTypes= [];
         let pokeSprite;
@@ -29,16 +28,28 @@
         let stats = [];
 
 
-        function selectPoke(){
+        // function selectPoke(){
 
-          poke2 = pokemons[Math.floor(Math.random() * pokemons.length)]
-          console.log(poke2)
+        //   poke2 = pokemons[Math.floor(Math.random() * pokemons.length)]
+        //   console.log(poke2)
 
-          }
+        //   }
 
-          selectPoke()
+        //   selectPoke()
     
         onMount(() => {
+
+          let button = document.getElementById("pokeButton2");
+          let poke2 = "charizard";
+
+          button.addEventListener ("click", function returnText(){
+            poke2 = document.getElementById("userInput2").value;
+            getPoke();
+            getMoves();
+            statCount();
+            drawChart();
+          })
+
 
           async function getPoke() {
             url = "https://pokeapi.co/api/v2/pokemon/"+ poke2;
@@ -134,6 +145,8 @@
 
               const json = await response.json();
 
+            d3.select("#chart2").selectAll('svg').remove();
+
             const margin = { top: 0, right: 0, bottom: 0, left: 0 },
               width = 500 - margin.left - margin.right,
               height = 500 - margin.top - margin.bottom,
@@ -211,6 +224,9 @@
 
     
     <section class = "pokemon">
+
+      <input id="userInput2" type="text" placeholder="Choose your Pokémon">
+      <button id="pokeButton2">Submit</button>
 
         <section class="firstHalf">
             <h2>{pokeName} </h2> 
