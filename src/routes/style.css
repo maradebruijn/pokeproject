@@ -6,7 +6,7 @@
   :root {
     --h1-color: black;
     --pokeRed: rgb(255, 53, 53);
-    --pokeBlue: rgb(195, 195, 255);
+    --pokeBlue: #c3c3ff;
   }
 
 @font-face {
@@ -24,7 +24,7 @@
   /*       TEKST       */
   /*********************/
     
-  h1, h2, h3, h4, p, a, li{
+  h1, h2, h3, h4, p, a, li, input, button, svg{
     font-family: "pokefont";
 }
 
@@ -63,6 +63,10 @@
   li{
     list-style-type: none;
     background-color: var(--pokeBlue);
+  }
+
+  svg{
+    font-size: 0.1px;
   }
 
   .types{
@@ -108,7 +112,7 @@
   }
 
   .pokemon{
-    width: 20em;
+    width: 30em;
     padding: 1em;
     background-color: rgb(188, 188, 188);
     border-style: solid;
@@ -139,16 +143,12 @@
   }
 
 
-  #chart-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
-  }
+  /*********************/
+  /*  Voor de grafiek  */
+  /*********************/
+
   
   #chart {
-    width: 500px; /* Increase width if needed */
-    height: 500px; /* Increase height if needed */
+    width: auto; 
+    height: auto; 
   }

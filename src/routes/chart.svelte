@@ -18,7 +18,7 @@ let stats = [];
         let poke1;
     //     let pokeStats = [];
     //     let statsName = [];
-    //     let statSum;
+    //     let statSum; 
 
     function selectPoke(){
 

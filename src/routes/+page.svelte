@@ -2,8 +2,6 @@
 
 //alles wat ik van andere bestanden pak
 import "./style.css";
-import * as d3 from 'd3';
-import { onMount } from "svelte";
 import PokeBox1 from "./pokebox1.svelte"
 import PokeBox2 from "./pokebox2.svelte"
 import Chart from "./chart.svelte"
@@ -62,6 +60,6 @@ import Chart from "./chart.svelte"
   <PokeBox2 />
 
 </section>
-<Chart />
+
 </main>
 
